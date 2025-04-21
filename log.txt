@@ -1,0 +1,3 @@
+This is a demo log file.
+sdjkcnscnsjakcnsaciljsacioslcjmsldkcsd
+[10-09-24] Helper.java : Unable to get more info for Vin 2020202023 in DB having Model_Year=2019, Suffix=AB. 
