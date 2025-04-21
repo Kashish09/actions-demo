@@ -15,7 +15,7 @@ function readLogs {
             echo "$line" | awk '{
             match($0, /Vin ([0-9]+).*Model_Year=[0-9]{4}.*Suffix=[a-zA-Z]{2}.*/, a);
             if (a[1]!= "" && a[2]!= "" && a[3]!= "")
-                print "Vin= " a[1] "Model_Year=" a[2] "Suffix= " a[3];
+                print "Vin= " a[1], "Model_Year=" a[2], "Suffix= " a[3];
             }'
         done
     fi
