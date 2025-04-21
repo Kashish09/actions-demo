@@ -14,5 +14,7 @@ jobs:
     Print-Log-File:
         runs-on: ubuntu-latest
         steps:
+            - name: Code Checkout
+              uses: actions/checkout@v4
             - name: Print Log text file
-              run: cat ../log.txt
+              run: cat log.txt
