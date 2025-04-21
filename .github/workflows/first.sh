@@ -9,7 +9,7 @@ fi
 logfile = "$1"
 
 function readLogs {
-    if {{ -f $logfile }};then
+    if {{ -f "$logfile" }};then
         grep -e "Vin [0-9]+.*Model_Year=[0-9]{4}.*Suffix=[a-zA-Z]{2}.*" "$logfile" | \
         while read -r line;do
             echo "$line" | awk '{
