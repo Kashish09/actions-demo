@@ -27,6 +27,10 @@ jobs:
             - name: Change file permissions
               run: chmod +x first.sh
             - name: Print Log text file using shell script
+              id: shellLogOutput
               run: |
                 echo "Running shell script for log extraction"
-                ./first.sh log.txt
+                result=$(./first.sh log.txt)
+                echo "$result" >> GITHUB_OUTPUT
+            - name: Shell Log Output
+              run: echo "${{ steps.shellLogOutput.outputs.result }}"
