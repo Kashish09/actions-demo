@@ -27,4 +27,6 @@ jobs:
             - name: Change file permissions
               run: chmod +x first.sh
             - name: Print Log text file using shell script
-              run: ./first.sh log.txt
+              run: |
+                echo "Running shell script for log extraction"
+                ./first.sh log.txt
