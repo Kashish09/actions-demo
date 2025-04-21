@@ -15,4 +15,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Print Log text file
-              run: cat ./log.txt
+              run: cat ../log.txt
