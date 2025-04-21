@@ -18,3 +18,13 @@ jobs:
               uses: actions/checkout@v4
             - name: Print Log text file
               run: cat log.txt
+
+    Print-Log-Using-ShellScript:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code Checkout
+              uses: actions/checkout@v4
+            - name: Change file permissions
+              run: chmod +x first.sh
+            - name: Print Log text file using shell script
+              run: ./first.sh log.txt
