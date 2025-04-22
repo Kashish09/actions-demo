@@ -14,3 +14,5 @@ function readLogs {
         sed -nE 's/.*Vin ([0-9]+).*Model_Year=([0-9]{4}).*Suffix=([a-zA-Z]{2}).*/Vin=\1 Model_Year=\2 Suffix=\3/p'
     fi
 }
+
+readLogs
