@@ -31,9 +31,9 @@ jobs:
               run: |
                 echo "Running shell script for log extraction"
                 result=$(./first.sh log.txt)
-                # echo "$result"
-                # echo "result<<EOF" >> "$GITHUB_OUTPUT"
+                echo "$result"
+                echo "result<<EOF" >> "$GITHUB_OUTPUT"
                 echo "$result" >> "$GITHUB_OUTPUT"
-                # echo "EOF" >> "$GITHUB_OUTPUT"
+                echo "EOF" >> "$GITHUB_OUTPUT"
             - name: Shell Log Output
               run: echo "${{ steps.shellLogOutput.outputs.result }}"
